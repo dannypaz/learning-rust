@@ -1,3 +1,5 @@
+mod test;
+
 // This is a way to add `Display` the struct and allow us to print the value
 // This would be a macro
 #[derive(Debug)]
@@ -57,14 +59,10 @@ fn fourth() {
     println!("My position is {:#?}", pos)
 }
 
-#[test]
-fn funny_name() {
-    assert_eq!(1, 1);
-}
-
 fn main() {
     first();
     second();
     third();
     fourth();
+    test::other_function();
 }
